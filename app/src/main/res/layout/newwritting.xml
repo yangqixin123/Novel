@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tools_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:contentInsetStart="0dp"
+        android:background="#ffffff"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginLeft="100dp"
+            android:text="新章节"
+            android:textColor="@color/blue"
+            android:textSize="24sp"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="100dp"
+            android:id="@+id/publish"
+            android:text="发布"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/text"
+            android:background="@color/white"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_below="@+id/tools_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/ET1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入新作品名"/>
+
+        <EditText
+            android:id="@+id/ET2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入章节名"/>
+
+        <EditText
+            android:id="@+id/ET3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="30000"
+            android:background="@null"
+            android:hint="请输入正文"/>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

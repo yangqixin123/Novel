@@ -1,0 +1,34 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28     //指定编译用的SDK版本号。如28表示用Android9.0编译
+    defaultConfig {
+        applicationId "com.sxau.novel"    //指定该模块的应用编号，即App的包名。该参数为自动生成，无需修改
+        minSdkVersion 15                  //指定App适合运行的最小SDK版本号。如16表示至少要在Android4.1上运行
+        targetSdkVersion 28               //指定目标设备的SDK版本号。即App最希望在哪个版本的Android上运行
+        versionCode 1                     //指定App的应用版本号
+        versionName "1.0"                 //指定App的应用版本名称
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false           //指定是否开启代码混淆功能。true表示开启混淆，false表示无需混淆。
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'   //指定代码混淆规则文件的文件名
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+}
+//指定App编译的依赖信息
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])      //指定引用架包的路径
+    implementation 'com.android.support:appcompat-v7:28.0.0'      //指定编译Android的高版本支持库
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'                        //指定单元测试编译用的junit版本号
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}

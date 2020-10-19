@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tools_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:contentInsetStart="0dp"
+        android:background="#03A9F4"
+        >
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="书架"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            />
+    </android.support.v7.widget.Toolbar>
+
+
+    <ScrollView
+        android:background="@drawable/background_bookshelf1"
+        android:paddingTop="3dp"
+        android:layout_below="@id/tools_bar"
+        android:fillViewport="true"
+        android:id="@+id/scrollview"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:scrollbars="vertical"
+        android:fadingEdge="vertical">
+
+        <LinearLayout
+            android:background="@drawable/background_bookshelf1"
+            android:id="@+id/activity_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/book1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/book1"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_bookshelf1"
+                    android:text="修的可能是假仙"
+                    />
+
+                <Button
+                    android:id="@+id/book2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/book2"
+                    android:background="@drawable/background_bookshelf1"
+                    android:text="抗日之烽火系统" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/book3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/book3"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_bookshelf1"
+                    android:text="交锋"
+                    />
+
+                <Button
+                    android:id="@+id/book4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/book4"
+                    android:background="@drawable/background_bookshelf1"
+                    android:text="永恒国度" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/book5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/book5"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_bookshelf1"
+                    android:text="最强升级系统"
+                    />
+
+                <Button
+                    android:id="@+id/book6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/book6"
+                    android:background="@drawable/background_bookshelf1"
+                    android:text="创始道纪" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20px">
+
+                <Button
+                    android:id="@+id/add"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/add1"
+                    android:background="@drawable/background_bookshelf1"
+                    android:text="添加图书" />
+            </LinearLayout>
+
+        </LinearLayout>>
+    </ScrollView>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/bookshelf_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="书架"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:drawableTop="@drawable/radiobutton_bg_bookshelf"
+            android:background="#ffffff"
+            android:clickable="true"/>
+
+        <Button
+            android:id="@+id/bookstore_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="书城"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:drawableTop="@drawable/radiobutton_bg_bookstore"
+            android:background="#ffffff"
+            android:clickable="true"/>
+
+        <Button
+            android:id="@+id/writing_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="写作"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:drawableTop="@drawable/radiobutton_bg_writing"
+            android:background="#ffffff"
+            android:clickable="true"/>
+
+        <Button
+            android:id="@+id/user_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="个人中心"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:drawableTop="@drawable/radiobutton_bg_user"
+            android:background="#ffffff"
+            android:clickable="true"/>
+    </LinearLayout>
+
+</RelativeLayout>
+
+<!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:id="@+id/scrollview"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--tools:context=".MainActivity"-->
+    <!--android:scrollbars="vertical"-->
+    <!--android:fadingEdge="vertical">-->
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/activity_main"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="vertical"-->
+        <!--android:scrollbars="vertical">-->
+
+
+        <!--<android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"-->
+            <!--android:id="@+id/tools_bar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="?attr/actionBarSize"-->
+            <!--android:background="#03A9F4"-->
+            <!--app:contentInsetStart="0dp">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/text"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:gravity="center"-->
+                <!--android:text="书架"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="24sp" />-->
+        <!--</android.support.v7.widget.Toolbar>-->
+
+
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<Button-->
+                <!--android:id="@+id/book1"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:drawableTop="@drawable/book1"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="我修的可能是假仙"-->
+                <!--/>-->
+
+            <!--<Button-->
+                <!--android:id="@+id/book2"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="20px"-->
+                <!--android:layout_weight="1"-->
+                <!--android:drawableTop="@drawable/book2"-->
+                <!--android:text="抗日之烽火系统" />-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<Button-->
+                <!--android:id="@+id/book3"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:drawableTop="@drawable/book3"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="交锋"-->
+                <!--/>-->
+
+            <!--<Button-->
+                <!--android:id="@+id/book4"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="20px"-->
+                <!--android:layout_weight="1"-->
+                <!--android:drawableTop="@drawable/book4"-->
+                <!--android:text="永恒国度" />-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_marginTop="20px">-->
+
+            <!--<Button-->
+                <!--android:id="@+id/add"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:drawableTop="@drawable/add1"-->
+                <!--android:text="添加图书" />-->
+        <!--</LinearLayout>-->
+
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true">-->
+
+        <!--<Button-->
+            <!--android:id="@+id/bookshelf_btn"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="书架"-->
+            <!--android:textSize="12sp"-->
+            <!--android:gravity="center"-->
+            <!--android:drawableTop="@drawable/radiobutton_bg_bookshelf"-->
+            <!--android:background="#ffffff"-->
+            <!--android:clickable="true"/>-->
+
+        <!--<Button-->
+            <!--android:id="@+id/bookstore_btn"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="书城"-->
+            <!--android:textSize="12sp"-->
+            <!--android:gravity="center"-->
+            <!--android:drawableTop="@drawable/radiobutton_bg_bookstore"-->
+            <!--android:background="#ffffff"-->
+            <!--android:clickable="true"/>-->
+
+        <!--<Button-->
+            <!--android:id="@+id/writing_btn"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="写作"-->
+            <!--android:textSize="12sp"-->
+            <!--android:gravity="center"-->
+            <!--android:drawableTop="@drawable/radiobutton_bg_writing"-->
+            <!--android:background="#ffffff"-->
+            <!--android:clickable="true"/>-->
+
+        <!--<Button-->
+            <!--android:id="@+id/user_btn"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="个人中心"-->
+            <!--android:textSize="12sp"-->
+            <!--android:gravity="center"-->
+            <!--android:drawableTop="@drawable/radiobutton_bg_user"-->
+            <!--android:background="#ffffff"-->
+            <!--android:clickable="true"/>-->
+    <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+<!--</ScrollView>-->

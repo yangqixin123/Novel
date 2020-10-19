@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tools_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:contentInsetStart="0dp"
+        android:background="#03A9F4"
+        >
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="书城"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            />
+    </android.support.v7.widget.Toolbar>
+
+    <!--跑马灯滚动的效果图，ellipsize属性设置为true表示文字从右向左滚动 -->
+    <TextView
+        android:layout_below="@+id/tools_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_marquee"
+        android:layout_marginTop="5dp"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColor="#D32F2F"
+        android:textSize="24sp"
+        android:text="快讯：Novel正在加班加点的更新中，希望给您带来更好的体验效果，如果给您带来不便，多多谅解！"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_below="@id/tv_marquee">
+
+    <ListView
+        android:layout_below="@+id/tools_bar"
+        android:id="@+id/listView"
+        android:scrollbars="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        />
+    </ScrollView>
+
+
+    <!--<FrameLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:id="@+id/F2">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical">-->
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="@color/grey_300"-->
+                <!--/>-->
+
+            <!--<RadioGroup-->
+                <!--android:id="@+id/rg2"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="56dp"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<RadioButton-->
+                <!--android:id="@+id/bookshelf_btn"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="#ffffff"-->
+                <!--android:button="@null"-->
+                <!--android:drawableTop="@drawable/radiobutton_bg_bookshelf"-->
+                <!--android:gravity="center"-->
+                <!--android:text="书架"-->
+                <!--android:textSize="12sp" />-->
+
+                <!--<RadioButton-->
+                    <!--android:id="@+id/bookstore_btn"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="#ffffff"-->
+                    <!--android:button="@null"-->
+                    <!--android:drawableTop="@drawable/radiobutton_bg_bookstore"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="书城"-->
+                    <!--android:textSize="12sp" />-->
+
+                <!--<RadioButton-->
+                    <!--android:id="@+id/writing_btn"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="#ffffff"-->
+                    <!--android:button="@null"-->
+                    <!--android:drawableTop="@drawable/radiobutton_bg_writing"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="写作"-->
+                    <!--android:textSize="12sp" />-->
+
+                <!--<RadioButton-->
+                    <!--android:id="@+id/user_btn"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="#ffffff"-->
+                    <!--android:button="@null"-->
+                    <!--android:drawableTop="@drawable/radiobutton_bg_user"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="个人中心"-->
+                    <!--android:textSize="12sp" />-->
+            <!--</RadioGroup>-->
+
+        <!--</LinearLayout>-->
+
+    <!--</FrameLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+
+        <Button
+            android:id="@+id/bookshelf_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:clickable="true"
+            android:drawableTop="@drawable/radiobutton_bg_bookshelf"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="书架"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/bookstore_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="书城"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:drawableTop="@drawable/radiobutton_bg_bookstore"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="#ffffff"/>
+
+        <Button
+            android:id="@+id/writing_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="写作"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:drawableTop="@drawable/radiobutton_bg_writing"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="#ffffff"/>
+
+        <Button
+            android:id="@+id/user_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="个人中心"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:drawableTop="@drawable/radiobutton_bg_user"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="#ffffff"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Search_View">
+        <attr name="textSizeSearch" format="dimension"  />
+        <attr name="textColorSearch" format="color" />
+        <attr name="textHintSearch" format="string" >搜索书架或书城</attr>
+        <attr name="searchBlockHeight" format="integer" />
+        <attr name="searchBlockColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ItemView">
+        <attr name="left_icon" format="integer"/>//设置左侧图标
+        <attr name="show_left_icon" format="boolean"/>//是否显示左侧图标
+        <attr name="left_text" format="string"/>//左侧标题文字
+        <attr name="right_text" format="string"/>//右侧描述文字
+        <attr name="show_right_arrow" format="boolean"/>//是否显示右侧小箭头
+        <attr name="show_bottom_line" format="boolean"/>//是否显示下划线
+    </declare-styleable>
+
+
+    <declare-styleable name="Fragment4_item_view">
+            <attr name="show_bottomline" format="boolean" />
+            <attr name="show_leftimg" format="integer" />
+            <attr name="show_text" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="CountdownCircleProgressBar">
+        <attr name="circleColor" format="color"/>
+        <attr name="circleWith" format="dimension"/>
+    </declare-styleable>
+
+
+</resources>

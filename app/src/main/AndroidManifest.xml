@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sxau.novel">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher1"
+        android:roundIcon="@drawable/ic_launcher1"
+        android:supportsRtl="true"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".MainActivity">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+
+        <activity android:name=".UserActivity">
+        </activity>
+
+        <activity android:name=".SearchDemo">
+        </activity>
+
+        <activity android:name=".WritingActivity">
+        </activity>
+
+        <activity android:name=".BookstoreActivity">
+        </activity>
+
+        <activity android:name=".DisplayActivity">
+        </activity>
+
+        <activity android:name=".newWritting">
+        </activity>
+
+        <activity android:name=".LoginMainActivity">
+        </activity>
+
+        <activity android:name=".LoginForgetActivity">
+        </activity>
+
+        <activity android:name=".RegisterActivity">
+        </activity>
+
+    </application>
+
+</manifest>

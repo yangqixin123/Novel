@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tools_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:contentInsetStart="0dp"
+        android:background="#03A9F4"
+        >
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="个人中心"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            />
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/RL1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tools_bar">
+
+        <ImageView
+            android:id="@+id/h_back"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/background"
+            android:alpha="0.8"/>
+
+        <ImageView
+            android:id="@+id/h_head"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/head1"
+            android:alpha="0.8"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/h_back"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/user_line"
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_centerHorizontal="true"
+                android:background="#3F51B5"/>
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/user_line"
+                android:textSize="17sp"
+                android:textColor="#673AB7"
+                android:clickable="true"
+                android:text="刘文杰"/>
+
+            <TextView
+                android:id="@+id/user_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textSize="17sp"
+                android:textColor="#673AB7"
+                android:layout_toRightOf="@id/user_line"
+                android:clickable="true"
+                android:text="175****6143"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/RL1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/collect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/collect"
+            android:drawablePadding="20dp"
+            android:text="我的收藏"
+            android:textSize="24sp"
+            android:paddingLeft="15dp"
+            android:background="#ffffff"
+            android:autoLink="all"
+            android:drawableRight="@drawable/right1"
+            android:clickable="true" />
+
+        <TextView
+            android:id="@+id/history"
+            android:layout_below="@+id/collect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/history"
+            android:drawablePadding="20dp"
+            android:text="历史记录"
+            android:paddingTop="5dp"
+            android:textSize="24sp"
+            android:paddingLeft="15dp"
+            android:background="#ffffff"
+            android:autoLink="all"
+            android:drawableRight="@drawable/right1"
+            android:clickable="true" />
+
+        <TextView
+            android:id="@+id/download"
+            android:layout_below="@+id/history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/download"
+            android:drawablePadding="20dp"
+            android:text="离线缓存"
+            android:textSize="24sp"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:background="#ffffff"
+            android:autoLink="all"
+            android:drawableRight="@drawable/right1"
+            android:clickable="true" />
+
+        <TextView
+            android:id="@+id/update"
+            android:layout_below="@+id/download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/update"
+            android:drawablePadding="20dp"
+            android:text="版本更新"
+            android:textSize="24sp"
+            android:paddingLeft="15dp"
+            android:background="#ffffff"
+            android:autoLink="all"
+            android:drawableRight="@drawable/right1"
+            android:paddingTop="25dp"
+            android:clickable="true" />
+
+        <TextView
+            android:id="@+id/about"
+            android:layout_below="@+id/update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/about1"
+            android:drawablePadding="20dp"
+            android:text="关于Novel"
+            android:textSize="24sp"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:background="#ffffff"
+            android:autoLink="all"
+            android:drawableRight="@drawable/right1"
+            android:clickable="true" />
+
+        <Button
+            android:id="@+id/user_exitbtn"
+            android:layout_below="@+id/about"
+            android:layout_marginTop="50dp"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:background="#03A9F4"
+            android:text="退出登录"
+            android:textStyle="bold"
+            android:textScaleX="1.6"
+            android:textColor="@color/white"
+            android:layout_marginLeft="105dp"
+            android:textSize="24sp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/bookshelf_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="书架"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:drawableTop="@drawable/radiobutton_bg_bookshelf"
+            android:background="#ffffff"
+            android:clickable="true"/>
+
+        <Button
+            android:id="@+id/bookstore_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="书城"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:drawableTop="@drawable/radiobutton_bg_bookstore"
+            android:background="#ffffff"
+            android:clickable="true"/>
+
+        <Button
+            android:id="@+id/writing_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="写作"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:drawableTop="@drawable/radiobutton_bg_writing"
+            android:background="#ffffff"
+            android:clickable="true"/>
+
+        <Button
+            android:id="@+id/user_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="个人中心"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:drawableTop="@drawable/radiobutton_bg_user"
+            android:background="#ffffff"
+            android:clickable="true"/>
+    </LinearLayout>
+</RelativeLayout>
